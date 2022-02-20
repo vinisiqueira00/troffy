@@ -1,0 +1,354 @@
+.menuDrawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    pointer-events: none;
+    z-index: 10;
+}
+.menuDrawer.opened { pointer-events: all }
+
+.menuDrawerOverlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    background-color: transparent;
+    cursor: pointer;
+
+    transition: .1s all ease-in-out;
+}
+.menuDrawer.opened .menuDrawerOverlay { background-color: rgba(0, 0, 0, .6) }
+
+.menuDrawerContent {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    width: 400px;
+    height: 100%;
+
+    margin: 0;
+    padding: 50px 40px;
+    border: 0;
+
+    background-color: #F5F8FA;
+    transform: translateX(-400px);
+
+    transition: .1s all ease-in-out;
+}
+.menuDrawer.opened .menuDrawerContent { transform: translateX(0) }
+
+.menuDrawerHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.menuDrawerCloseButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    cursor: pointer;
+}
+
+.menuDrawerSearch {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    margin: 50px 0 0 0;
+    padding: 0;
+    border: 0;
+}
+
+.menuDrawerSearchInput {
+    display: block;
+
+    width: 100%;
+    height: 56px;
+
+    margin: 0;
+    padding: 16px 78px 16px 24px;
+    border: 1px solid #E0E0E5;
+
+    border-radius: 4px;
+    background-color: #F5F8FA;
+    overflow: hidden;
+
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #303030;
+}
+.menuDrawerSearchInput::placeholder {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #AAAAAA;
+}
+
+.menuDrawerSearchEdge {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 3px;
+    height: 40px;
+
+    margin: 8px auto 8px 0;
+    padding: 0;
+    border: 0;
+
+    border-radius: 0 8px 8px 0;
+
+    background-color: transparent;
+    pointer-events: none;
+}
+.menuDrawerSearchEdge.show { background-color: #F47934 }
+
+.menuDrawerSearchSubmit {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    margin: 13px 24px 13px auto;
+    padding: 0;
+    border: 0;
+
+    cursor: pointer;
+}
+
+.menuDrawerLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    margin: 30px 0 0 0;
+    padding: 0;
+    border: 0;
+}
+
+.menuDrawerLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: auto;
+
+    margin: 20px 0 0 0;
+    padding: 0;
+    border: 0;
+
+    cursor: pointer;
+}
+.menuDrawerLink:first-child { margin: 0 }
+
+.menuDrawerLinkText {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #777777;
+
+    transition: .1s all ease-in-out;
+}
+.menuDrawerLink:not(.linkHighlight):hover .menuDrawerLinkText { color: #111111 }
+
+.menuDrawerLink.linkHighlight .menuDrawerLinkText {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-decoration-line: underline;
+    color: #F47934;
+}
+
+.menuDrawerAuthArea {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: auto;
+
+    margin: 75px 0 0 0;
+    padding: 0;
+    border: 0;
+}
+
+.menuDrawerAuthText {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    color: #303030;
+}
+
+.menuDrawerAuthButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 56px;
+
+    margin: 20px 0 0 0;
+    padding: 0;
+    border: 0;
+}
+
+.menuDrawerAuthRegister {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 175px;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    border-radius: 4px;
+    background-color: #111111;
+    cursor: pointer;
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: #F5F8FA;
+
+    transition: .1s all ease-in-out;
+}
+.menuDrawerAuthRegister:hover { background-color: #F47934 }
+
+.menuDrawerAuthLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 125px;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    border-radius: 4px;
+    background-color: #F5F8FA;
+    cursor: pointer;
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: #111111;
+
+    transition: .1s all ease-in-out;
+}
+.menuDrawerAuthLogin:hover { background-color: #F47934; color: #F5F8FA }
+
+.menuDrawerSearchResult {
+    position: absolute;
+    top: 30px;
+    left: 450px;
+    bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    width: 580px;
+    height: calc(100vh - 60px);
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    opacity: 0;
+    border-radius: 4px;
+    background-color: #F5F8FA;
+    pointer-events: none;
+
+    transition: .2s all ease-in-out;
+}
+.menuDrawerSearchResult.searchResultOpened {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.menuDrawerSearchResultQuery {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #303030;
+}
