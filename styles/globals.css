@@ -77,7 +77,7 @@ meter {
     -webkit-user-drag: element;
 }
 
-html { overflow: hidden }
+html { overflow-x: hidden }
 
 * {
     font-family: Poppins, Arial, Helvetica, sans-serif;

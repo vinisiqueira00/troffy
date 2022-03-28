@@ -91,7 +91,10 @@ const MenuDrawer: React.FC = () => {
             </nav>
 
             <section className={`${styles.menuDrawerSearchResult} ${opened && inputValue.length > 4 && styles.searchResultOpened}`}>
-                <h5 className={styles.menuDrawerSearchResultQuery}>Resultado da pesquisa “{inputValue}”</h5>
+                <h5 className={styles.menuDrawerSearchResultQuery}>
+                    <SearchOrangeIcon />
+                    <p className={styles.menuDrawerSearchResultQueryText}>{inputValue}</p>
+                </h5>
             </section>
         </div>
     )

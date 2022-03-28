@@ -4,7 +4,7 @@ import styles from '../../../../styles/linear-effect-words.module.css'
 
 const LinearEffectWords: React.FC = () => {
     return (
-        <div className={styles.linearEffectWords}>
+        <section className={styles.linearEffectWords}>
             <h1 className={styles.wordsTitle}>
                 <span className={styles.word}>Qualidade.</span>
                 <span className={styles.word}>Beleza.</span>
@@ -12,7 +12,7 @@ const LinearEffectWords: React.FC = () => {
             </h1>
 
             <h3 className={styles.phrase}>Acreditamos no poder do esporte para unir e inspirar as pessoas a agirem em suas comunidades.</h3>
-        </div>
+        </section>
     )
 }
 

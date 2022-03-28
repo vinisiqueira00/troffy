@@ -4,6 +4,7 @@ import type { NextPage } from 'next'
 import Header from './components/Header/_Header'
 import MenuDrawer from './components/MenuDrawer/_MenuDrawer'
 import LinearEffectWords from './components/LinearEffectWords/_LinearEffectWords'
+import HighlightsProducts from './components/HighlightsProducts/_HighlightsProducts'
 
 import { MenuDrawerContext } from '../../context/MenuDrawerContext'
 
@@ -18,8 +19,8 @@ const HomeContent: NextPage = () => {
 
             <div className={`${styles.page} ${opened && styles.menuDrawerOpened}`}>
                 <Header />
-
                 <LinearEffectWords />
+                <HighlightsProducts />
             </div>
         </>
     )
