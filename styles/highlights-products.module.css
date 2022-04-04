@@ -20,7 +20,7 @@
     justify-content: center;
 
     width: 100%;
-    height: auto;
+    height: 450px;
 
     margin: 0;
     padding: 0;
@@ -123,6 +123,8 @@
 
     border-radius: 4px;
     cursor: pointer;
+
+    transition: .1s all ease-in-out;
 }
 .highlightProductButtonElement:hover {
     background-color: #F5F8FA;
