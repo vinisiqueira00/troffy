@@ -16,3 +16,10 @@ interface ProductShelfItem {
         new: number,
     },
 }
+
+interface categoryListItem {
+    id: string
+    image: string
+    name: string
+    link: string
+}

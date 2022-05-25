@@ -1,0 +1,41 @@
+.accessPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.accessMain {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.accessMainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    width: auto;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+}

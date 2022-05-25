@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import type { NextPage } from 'next'
 
 import Header from './components/Header/_Header'
@@ -6,6 +6,8 @@ import MenuDrawer from './components/MenuDrawer/_MenuDrawer'
 import LinearEffectWords from './components/LinearEffectWords/_LinearEffectWords'
 import HighlightsProducts from './components/HighlightsProducts/_HighlightsProducts'
 import ProductShelf from './components/ProductShelf/_ProductShelf'
+import CategoryList from './components/CategoryList/_CategoryList'
+import Footer from './components/Footer/_Footer'
 
 import { MenuDrawerContext } from '../../context/MenuDrawerContext'
 
@@ -81,15 +83,50 @@ const HomeContent: NextPage = () => {
         },
     ]
 
+    const categoryList: categoryListItem[] = [
+        {
+            id: '1',
+            image: '/images/category/000001/001.png',
+            name: 'Boots',
+            link: '#',
+        },
+        {
+            id: '2',
+            image: '/images/category/000002/001.png',
+            name: 'Lifestyle',
+            link: '#',
+        },
+        {
+            id: '3',
+            image: '/images/category/000003/001.png',
+            name: 'Running',
+            link: '#',
+        },
+        {
+            id: '4',
+            image: '/images/category/000004/001.png',
+            name: 'Skateboarding',
+            link: '#',
+        },
+    ]
+
     return (
         <>
             <MenuDrawer />
 
             <div className={`${styles.page} ${opened && styles.menuDrawerOpened}`}>
                 <Header />
+
                 <LinearEffectWords />
+
                 <HighlightsProducts mostAccessed={mostAccessed} mostPurchased={mostPurchased} />
+
+                <ProductShelf products={productsList} title="Mais a ser explorado" />
                 <ProductShelf products={productsList} />
+
+                <CategoryList categories={categoryList} />
+
+                <Footer />
             </div>
         </>
     )
