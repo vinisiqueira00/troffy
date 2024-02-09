@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-// import Image from "next/image";
+import Image from "next/image";
 
-import HeartStrokeBlackIcon from "../../../../public/svgs/heart-stroke-black.svg";
-import HeartStrokeRedIcon from "../../../../public/svgs/heart-stroke-red.svg";
-import HeartFillRedIcon from "../../../../public/svgs/heart-fill-red.svg";
+import HeartStrokeBlackIcon from "../../public/svgs/heart-stroke-black.svg";
+import HeartStrokeRedIcon from "../../public/svgs/heart-stroke-red.svg";
+import HeartFillRedIcon from "../../public/svgs/heart-fill-red.svg";
 
-import styles from "../../../../styles/products-card.module.css";
+import styles from "../../styles/products-card.module.css";
 
 interface ProductCardProps {
     product: ProductShelfItem;
@@ -42,9 +42,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
     return (
         <div className={styles.productCard}>
             <div className={styles.productCardHead}>
-                {/* <Image className={styles.productCardHeadImage} src={product.image} alt={ product.name } layout='fill' /> */}
+                <Image
+                    className={styles.productCardHeadImage}
+                    src={product.image}
+                    alt={product.name}
+                    layout="fill"
+                />
 
-                {/* <div className={styles.productCardHeadOverlay}>
+                <div className={styles.productCardHeadOverlay}>
                     <p className={styles.productCardHeadCategory}>
                         {product.category}
                     </p>
@@ -73,9 +78,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
                             <HeartStrokeBlackIcon />
                         )}
                     </button>
-                </div> */}
+                </div>
             </div>
-            {/* <div className={styles.productCardContent}>
+            <div className={styles.productCardContent}>
                 <h3 className={styles.productCardContentName}>
                     {product.name}
                 </h3>
@@ -87,7 +92,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                         })
                         .replace(".", ",")}
                 </h5>
-            </div> */}
+            </div>
         </div>
     );
 };

@@ -2,13 +2,13 @@ import React, { useContext } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import Header from "./components/Header/_Header";
-import MenuDrawer from "./components/MenuDrawer/_MenuDrawer";
-import LinearEffectWords from "./components/LinearEffectWords/_LinearEffectWords";
-import HighlightsProducts from "./components/HighlightsProducts/_HighlightsProducts";
-import ProductShelf from "./components/ProductShelf/_ProductShelf";
-import CategoryList from "./components/CategoryList/_CategoryList";
-import Footer from "./components/Footer/_Footer";
+import Header from "../../components/Header/_Header";
+import MenuDrawer from "../../components/MenuDrawer/_MenuDrawer";
+import LinearEffectWords from "../../components/LinearEffectWords/_LinearEffectWords";
+import HighlightsProducts from "../../components/HighlightsProducts/_HighlightsProducts";
+import ProductShelf from "../../components/ProductShelf/_ProductShelf";
+import CategoryList from "../../components/CategoryList/_CategoryList";
+import Footer from "../../components/Footer/_Footer";
 
 import { MenuDrawerContext } from "../../context/MenuDrawerContext";
 
@@ -129,20 +129,20 @@ const HomeContent: NextPage = () => {
             >
                 <Header />
 
-                {/* <LinearEffectWords /> */}
+                <LinearEffectWords />
 
-                {/* <HighlightsProducts
+                <HighlightsProducts
                     mostAccessed={mostAccessed}
                     mostPurchased={mostPurchased}
-                /> */}
+                />
 
-                {/* <ProductShelf
+                <ProductShelf
                     products={productsList}
                     title="Mais a ser explorado"
-                /> */}
-                {/* <ProductShelf products={productsList} /> */}
+                />
+                <ProductShelf products={productsList} />
 
-                {/* <CategoryList categories={categoryList} /> */}
+                <CategoryList categories={categoryList} />
 
                 <Footer />
             </div>

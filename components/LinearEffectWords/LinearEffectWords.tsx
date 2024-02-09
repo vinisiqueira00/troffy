@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import styles from '../../../../styles/linear-effect-words.module.css'
+import styles from "../../styles/linear-effect-words.module.css";
 
 const LinearEffectWords: React.FC = () => {
     return (
@@ -11,9 +11,12 @@ const LinearEffectWords: React.FC = () => {
                 <span className={styles.word}>Preço.</span>
             </h1>
 
-            <h3 className={styles.phrase}>Acreditamos no poder do esporte para unir e inspirar as pessoas a agirem em suas comunidades.</h3>
+            <h3 className={styles.phrase}>
+                Acreditamos no poder do esporte para unir e inspirar as pessoas
+                a agirem em suas comunidades.
+            </h3>
         </section>
-    )
-}
+    );
+};
 
-export default LinearEffectWords
+export default LinearEffectWords;

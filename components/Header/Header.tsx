@@ -1,38 +1,44 @@
-import { useContext } from 'react'
+import { useContext } from "react";
 
-import { MenuDrawerContext } from '../../../../context/MenuDrawerContext'
+import { MenuDrawerContext } from "../../context/MenuDrawerContext";
 
-import styles from '../../../../styles/header.module.css'
+import styles from "../../styles/header.module.css";
 
-import MenuIcon from '../../../../public/svgs/menu.svg'
-import SearchIcon from '../../../../public/svgs/search.svg'
-import Logotype from '../../../../public/svgs/logotype.svg'
-import AccountIcon from '../../../../public/svgs/account.svg'
-import BagIcon from '../../../../public/svgs/bag.svg'
+import MenuIcon from "../../public/svgs/menu.svg";
+import SearchIcon from "../../public/svgs/search.svg";
+import Logotype from "../../public/svgs/logotype.svg";
+import AccountIcon from "../../public/svgs/account.svg";
+import BagIcon from "../../public/svgs/bag.svg";
 
 const Header: React.FC = () => {
-    const { setOpened, setSearchFocused } = useContext(MenuDrawerContext)
+    const { setOpened, setSearchFocused } = useContext(MenuDrawerContext);
 
     const handleOpenMenu = () => {
-        setSearchFocused(false)
-        setOpened(true)
-    }
+        setSearchFocused(false);
+        setOpened(true);
+    };
 
     const handleOpenMenuFocused = () => {
-        setSearchFocused(true)
-        setOpened(true)
-    }
+        setSearchFocused(true);
+        setOpened(true);
+    };
 
     return (
         <header className={styles.header}>
             <div className={styles.headerContent}>
                 <div className={styles.headerMenuArea}>
-                    <button className={styles.headerMenuButton} onClick={handleOpenMenu}>
+                    <button
+                        className={styles.headerMenuButton}
+                        onClick={handleOpenMenu}
+                    >
                         <MenuIcon />
                     </button>
                 </div>
                 <div className={styles.headerSearchArea}>
-                    <button className={styles.headerSearchButton} onClick={handleOpenMenuFocused}>
+                    <button
+                        className={styles.headerSearchButton}
+                        onClick={handleOpenMenuFocused}
+                    >
                         <SearchIcon />
                     </button>
                 </div>
@@ -51,7 +57,7 @@ const Header: React.FC = () => {
                 </div>
             </div>
         </header>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

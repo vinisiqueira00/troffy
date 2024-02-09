@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 
 import ProductCard from "../ProductCard/_ProductCard";
 
-import ArrowRightIcon from "../../../../public/svgs/arrow-right-white.svg";
-import ArrowLeftIcon from "../../../../public/svgs/arrow-left-white.svg";
+import ArrowRightIcon from "../../public/svgs/arrow-right-white.svg";
+import ArrowLeftIcon from "../../public/svgs/arrow-left-white.svg";
 
-import styles from "../../../../styles/products-shelf.module.css";
+import styles from "../../styles/products-shelf.module.css";
 
 interface ProductShelfProps {
     products: ProductShelfItem[];
@@ -69,9 +69,13 @@ const ProductShelf: React.FC<ProductShelfProps> = ({
             )}
 
             <div className={styles.productShelfContent}>
-                {/* <div className={`${styles.productShelfList} productShelfList__${idRandom}`}>
-                    { products.map((product: ProductShelfItem) => <ProductCard key={product.id} product={product} />) }
-                </div> */}
+                <div
+                    className={`${styles.productShelfList} productShelfList__${idRandom}`}
+                >
+                    {products.map((product: ProductShelfItem) => (
+                        <ProductCard key={product.id} product={product} />
+                    ))}
+                </div>
 
                 <button
                     className={styles.productShelfButtonLeft}

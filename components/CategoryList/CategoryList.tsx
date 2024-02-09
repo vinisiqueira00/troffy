@@ -1,8 +1,8 @@
 import React from "react";
 
-import CategoryItem from "../CategoryItem/_CategoryItem";
+import CategoryItem from "../CategoryItem/CategoryItem";
 
-import styles from "../../../../styles/category-list.module.css";
+import styles from "../../styles/category-list.module.css";
 
 interface CategoryListProps {
     categories: categoryListItem[];
@@ -13,7 +13,9 @@ const CategoryList: React.FC<CategoryListProps> = ({
 }: CategoryListProps) => {
     return (
         <div className={styles.categoryList}>
-            {/* { categories.map((category: categoryListItem) => <CategoryItem key={category.id} category={category} />) } */}
+            {categories.map((category: categoryListItem) => (
+                <CategoryItem key={category.id} category={category} />
+            ))}
         </div>
     );
 };

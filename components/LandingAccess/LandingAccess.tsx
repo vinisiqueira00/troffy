@@ -1,16 +1,18 @@
-import React from 'react'
+import React from "react";
 
-import MarkdownGroup01 from '../../../../public/svgs/markdown-group-01.svg'
-import MarkdownGroup02 from '../../../../public/svgs/markdown-group-02.svg'
-import MarkdownGroup03 from '../../../../public/svgs/markdown-group-03.svg'
-import MarkdownGroup04 from '../../../../public/svgs/markdown-group-04.svg'
-import BigLogotypeiIcon from '../../../../public/svgs/big-logotype.svg'
+import MarkdownGroup01 from "../../public/svgs/markdown-group-01.svg";
+import MarkdownGroup02 from "../../public/svgs/markdown-group-02.svg";
+import MarkdownGroup03 from "../../public/svgs/markdown-group-03.svg";
+import MarkdownGroup04 from "../../public/svgs/markdown-group-04.svg";
+import BigLogotypeiIcon from "../../public/svgs/big-logotype.svg";
 
-import styles from '../../../../styles/landing-access.module.css'
+import styles from "../../styles/landing-access.module.css";
 
 interface LandingAccessProps {}
 
-const LandingAccess: React.FC<LandingAccessProps> = (props: LandingAccessProps) => {
+const LandingAccess: React.FC<LandingAccessProps> = (
+    props: LandingAccessProps
+) => {
     return (
         <div className={styles.landingAccess}>
             <div className={styles.landingAccessMarks}>
@@ -30,10 +32,13 @@ const LandingAccess: React.FC<LandingAccessProps> = (props: LandingAccessProps) 
 
             <div className={styles.landingAccessContent}>
                 <BigLogotypeiIcon />
-                <p className={styles.landingAccessContentText}>Sua loja de tênis com <br/>qualidade e preço.</p>
+                <p className={styles.landingAccessContentText}>
+                    Sua loja de tênis com <br />
+                    qualidade e preço.
+                </p>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default LandingAccess
+export default LandingAccess;
