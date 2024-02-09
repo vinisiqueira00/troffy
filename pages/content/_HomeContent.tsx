@@ -129,20 +129,20 @@ const HomeContent: NextPage = () => {
             >
                 <Header />
 
-                <LinearEffectWords />
+                {/* <LinearEffectWords /> */}
 
-                <HighlightsProducts
+                {/* <HighlightsProducts
                     mostAccessed={mostAccessed}
                     mostPurchased={mostPurchased}
-                />
+                /> */}
 
-                <ProductShelf
+                {/* <ProductShelf
                     products={productsList}
                     title="Mais a ser explorado"
-                />
-                <ProductShelf products={productsList} />
+                /> */}
+                {/* <ProductShelf products={productsList} /> */}
 
-                <CategoryList categories={categoryList} />
+                {/* <CategoryList categories={categoryList} /> */}
 
                 <Footer />
             </div>

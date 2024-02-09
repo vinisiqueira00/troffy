@@ -1,13 +1,13 @@
-import React from 'react'
-import type { NextPage } from 'next'
+import React from "react";
+import type { NextPage } from "next";
 
-import PasswordShowIcon from '../../public/svgs/password-show.svg'
-import PasswordHideIcon from '../../public/svgs/password-hide.svg'
-import CheckIcon from '../../public/svgs/check.svg'
+import PasswordShowIcon from "../../public/svgs/password-show.svg";
+import PasswordHideIcon from "../../public/svgs/password-hide.svg";
+import CheckIcon from "../../public/svgs/check.svg";
 
-import LandingAccess from './components/LandingAccess/_LandingAccess.tsx'
+import LandingAccess from "./components/LandingAccess/_LandingAccess";
 
-import styles from '../../styles/login.module.css'
+import styles from "../../styles/login.module.css";
 
 const LoginContent: NextPage = () => {
     return (
@@ -22,35 +22,55 @@ const LoginContent: NextPage = () => {
                         <form className={styles.accessForm}>
                             <fieldset className={styles.accessFormField}>
                                 <span className={styles.accessFormBadge}></span>
-                                <label className={styles.accessFormLabel}>E-mail</label>
-                                <input className={styles.accessFormInput} type="email"/>
+                                <label className={styles.accessFormLabel}>
+                                    E-mail
+                                </label>
+                                <input
+                                    className={styles.accessFormInput}
+                                    type="email"
+                                />
                             </fieldset>
 
                             <fieldset className={styles.accessFormField}>
                                 <span className={styles.accessFormBadge}></span>
-                                <label className={styles.accessFormLabel}>Senha</label>
-                                <input className={styles.accessFormInput} type="password"/>
+                                <label className={styles.accessFormLabel}>
+                                    Senha
+                                </label>
+                                <input
+                                    className={styles.accessFormInput}
+                                    type="password"
+                                />
                                 <div className={styles.accessFormFieldIcon}>
                                     <PasswordShowIcon />
                                 </div>
                             </fieldset>
 
                             <div className={styles.accessFormInline}>
-                                <fieldset className={styles.accessFormCheckField}>
-                                    <span className={styles.accessFormCheckIcon}>
+                                <fieldset
+                                    className={styles.accessFormCheckField}
+                                >
+                                    <span
+                                        className={styles.accessFormCheckIcon}
+                                    >
                                         {/* <CheckIcon /> */}
                                     </span>
-                                    <span className={styles.accessFormCheckText}>Lembrar-me</span>
+                                    <span
+                                        className={styles.accessFormCheckText}
+                                    >
+                                        Lembrar-me
+                                    </span>
                                 </fieldset>
 
-                                <p className={styles.accessFormForgotPassword}>Esqueci minha senha</p>
+                                <p className={styles.accessFormForgotPassword}>
+                                    Esqueci minha senha
+                                </p>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default LoginContent
+export default LoginContent;
