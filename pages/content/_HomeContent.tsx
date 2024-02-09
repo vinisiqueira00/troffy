@@ -1,127 +1,145 @@
-import React, { useContext } from 'react'
-import type { NextPage } from 'next'
+import React, { useContext } from "react";
+import type { NextPage } from "next";
+import Head from "next/head";
 
-import Header from './components/Header/_Header'
-import MenuDrawer from './components/MenuDrawer/_MenuDrawer'
-import LinearEffectWords from './components/LinearEffectWords/_LinearEffectWords'
-import HighlightsProducts from './components/HighlightsProducts/_HighlightsProducts'
-import ProductShelf from './components/ProductShelf/_ProductShelf'
-import CategoryList from './components/CategoryList/_CategoryList'
-import Footer from './components/Footer/_Footer'
+import Header from "./components/Header/_Header";
+import MenuDrawer from "./components/MenuDrawer/_MenuDrawer";
+import LinearEffectWords from "./components/LinearEffectWords/_LinearEffectWords";
+import HighlightsProducts from "./components/HighlightsProducts/_HighlightsProducts";
+import ProductShelf from "./components/ProductShelf/_ProductShelf";
+import CategoryList from "./components/CategoryList/_CategoryList";
+import Footer from "./components/Footer/_Footer";
 
-import { MenuDrawerContext } from '../../context/MenuDrawerContext'
+import { MenuDrawerContext } from "../../context/MenuDrawerContext";
 
-import styles from '../../styles/home.module.css'
+import styles from "../../styles/home.module.css";
 
 const HomeContent: NextPage = () => {
-    const { opened } = useContext(MenuDrawerContext)
+    const { opened } = useContext(MenuDrawerContext);
 
     const mostAccessed: HighlightsProductsItem = {
-        id: '6',
-        image: '/images/products/000004/003.jpg',
-        name: 'Nike Air VaporMax Plus',
-        link: '/nike-air-vapormax-plus',
-    }
+        id: "6",
+        image: "/images/products/000004/003.jpg",
+        name: "Nike Air VaporMax Plus",
+        link: "/nike-air-vapormax-plus",
+    };
 
     const mostPurchased: HighlightsProductsItem = {
-        id: '7',
-        image: '/images/products/000005/003.jpg',
-        name: 'Nike ACG Air Nasu GORE-TEX',
-        link: '/nike-acg-air-nasu-gore-tex',
-    }
+        id: "7",
+        image: "/images/products/000005/003.jpg",
+        name: "Nike ACG Air Nasu GORE-TEX",
+        link: "/nike-acg-air-nasu-gore-tex",
+    };
 
     const productsList: ProductShelfItem[] = [
         {
-            id: '1',
-            image: '/images/products/000001/001.jpg',
-            name: 'Air Jordan 1 Mid',
-            category: 'Lifestyle',
-            link: '/air-jordan-1-mid',
+            id: "1",
+            image: "/images/products/000001/001.jpg",
+            name: "Air Jordan 1 Mid",
+            category: "Lifestyle",
+            link: "/air-jordan-1-mid",
             price: {
-                new: 115.00,
+                new: 115.0,
             },
         },
         {
-            id: '2',
-            image: '/images/products/000002/001.jpg',
-            name: 'Jordan Zoom Trunner Advance',
-            category: 'Running',
-            link: '/jordan-zoom-trunner-advance',
+            id: "2",
+            image: "/images/products/000002/001.jpg",
+            name: "Jordan Zoom Trunner Advance",
+            category: "Running",
+            link: "/jordan-zoom-trunner-advance",
             price: {
-                new: 110.00,
+                new: 110.0,
             },
         },
         {
-            id: '3',
-            image: '/images/products/000003/001.jpg',
-            name: 'Nike SB Shane',
-            category: 'Skateboarding',
-            link: '/nike-sb-shane',
+            id: "3",
+            image: "/images/products/000003/001.jpg",
+            name: "Nike SB Shane",
+            category: "Skateboarding",
+            link: "/nike-sb-shane",
             price: {
-                new: 80.00,
+                new: 80.0,
             },
         },
         {
-            id: '4',
-            image: '/images/products/000002/001.jpg',
-            name: 'Jordan Zoom Trunner Advance',
-            category: 'Running',
-            link: '/jordan-zoom-trunner-advance',
+            id: "4",
+            image: "/images/products/000002/001.jpg",
+            name: "Jordan Zoom Trunner Advance",
+            category: "Running",
+            link: "/jordan-zoom-trunner-advance",
             price: {
-                new: 110.00,
+                new: 110.0,
             },
         },
         {
-            id: '5',
-            image: '/images/products/000001/001.jpg',
-            name: 'Air Jordan 1 Mid',
-            category: 'Lifestyle',
-            link: '/air-jordan-1-mid',
+            id: "5",
+            image: "/images/products/000001/001.jpg",
+            name: "Air Jordan 1 Mid",
+            category: "Lifestyle",
+            link: "/air-jordan-1-mid",
             price: {
-                new: 115.00,
+                new: 115.0,
             },
         },
-    ]
+    ];
 
     const categoryList: categoryListItem[] = [
         {
-            id: '1',
-            image: '/images/category/000001/001.png',
-            name: 'Boots',
-            link: '#',
+            id: "1",
+            image: "/images/category/000001/001.png",
+            name: "Boots",
+            link: "#",
         },
         {
-            id: '2',
-            image: '/images/category/000002/001.png',
-            name: 'Lifestyle',
-            link: '#',
+            id: "2",
+            image: "/images/category/000002/001.png",
+            name: "Lifestyle",
+            link: "#",
         },
         {
-            id: '3',
-            image: '/images/category/000003/001.png',
-            name: 'Running',
-            link: '#',
+            id: "3",
+            image: "/images/category/000003/001.png",
+            name: "Running",
+            link: "#",
         },
         {
-            id: '4',
-            image: '/images/category/000004/001.png',
-            name: 'Skateboarding',
-            link: '#',
+            id: "4",
+            image: "/images/category/000004/001.png",
+            name: "Skateboarding",
+            link: "#",
         },
-    ]
+    ];
 
     return (
         <>
+            <Head>
+                <meta
+                    name="google-site-verification"
+                    content="7eK23OMDzJN_g0_000mYAESHH85S7cvlr0a2yMQArRU"
+                />
+            </Head>
+
             <MenuDrawer />
 
-            <div className={`${styles.page} ${opened && styles.menuDrawerOpened}`}>
+            <div
+                className={`${styles.page} ${
+                    opened && styles.menuDrawerOpened
+                }`}
+            >
                 <Header />
 
                 <LinearEffectWords />
 
-                <HighlightsProducts mostAccessed={mostAccessed} mostPurchased={mostPurchased} />
+                <HighlightsProducts
+                    mostAccessed={mostAccessed}
+                    mostPurchased={mostPurchased}
+                />
 
-                <ProductShelf products={productsList} title="Mais a ser explorado" />
+                <ProductShelf
+                    products={productsList}
+                    title="Mais a ser explorado"
+                />
                 <ProductShelf products={productsList} />
 
                 <CategoryList categories={categoryList} />
@@ -129,7 +147,7 @@ const HomeContent: NextPage = () => {
                 <Footer />
             </div>
         </>
-    )
-}
+    );
+};
 
-export default HomeContent
+export default HomeContent;
