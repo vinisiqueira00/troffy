@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import ProductCard from "../ProductCard/_ProductCard";
+import ProductCard from "../ProductCard/ProductCard";
 
 import ArrowRightIcon from "../../public/svgs/arrow-right-white.svg";
 import ArrowLeftIcon from "../../public/svgs/arrow-left-white.svg";

@@ -2,13 +2,13 @@ import React, { useContext } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import Header from "../../components/Header/_Header";
-import MenuDrawer from "../../components/MenuDrawer/_MenuDrawer";
-import LinearEffectWords from "../../components/LinearEffectWords/_LinearEffectWords";
-import HighlightsProducts from "../../components/HighlightsProducts/_HighlightsProducts";
-import ProductShelf from "../../components/ProductShelf/_ProductShelf";
-import CategoryList from "../../components/CategoryList/_CategoryList";
-import Footer from "../../components/Footer/_Footer";
+import Header from "../../components/Header/Header";
+import MenuDrawer from "../../components/MenuDrawer/MenuDrawer";
+import LinearEffectWords from "../../components/LinearEffectWords/LinearEffectWords";
+import HighlightsProducts from "../../components/HighlightsProducts/HighlightsProducts";
+import ProductShelf from "../../components/ProductShelf/ProductShelf";
+import CategoryList from "../../components/CategoryList/CategoryList";
+import Footer from "../../components/Footer/Footer";
 
 import { MenuDrawerContext } from "../../context/MenuDrawerContext";
 
