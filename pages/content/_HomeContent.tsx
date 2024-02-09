@@ -116,7 +116,7 @@ const HomeContent: NextPage = () => {
             <Head>
                 <meta
                     name="google-site-verification"
-                    content="7eK23OMDzJN_g0_000mYAESHH85S7cvlr0a2yMQArRU"
+                    content="CAOPbT26QS8bpYUvJaW5kxI9kh6nC_hA34kER-d4D_A"
                 />
             </Head>
 
